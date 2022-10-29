@@ -2,7 +2,15 @@ import React, { useEffect, useState } from 'react';
 import TextInput from '../TextInput';
 
 const TestIcon = () => {
-  return <div>icon</div>;
+  return (
+    <div>
+      <img
+        src={`${process.env.PUBLIC_URL}/images/logo192.png`}
+        width="32px"
+        alt="icon"
+      />
+    </div>
+  );
 };
 
 const TestContainer = () => {
@@ -27,12 +35,13 @@ const TestContainer = () => {
   return (
     <div>
       <TextInput
+        placeholder="input text"
         onFocus={onFocus}
         type="text"
         onChange={onChange}
         onBlur={onBlur}
         icon={<TestIcon />}
-        iconPosition="right"
+        iconPosition="left"
       />
     </div>
   );

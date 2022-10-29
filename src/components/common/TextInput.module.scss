@@ -1,7 +1,37 @@
 .input {
-  color: red;
+  display: flex;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #F3F3F3;
+  position: relative;
+
 
   input {
-    //border: 1px solid red;
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+
+    &::placeholder {
+      color: #9F9F9F;
+      line-height: 18px;
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
+}
+
+.iconInput {
+  padding: 15px 50px;
+}
+
+.focused {
+  border: 1px solid red;
+}
+
+.icon {
+  position: absolute;
+  left: 10px;
+  top: calc(50% - 16px);
 }

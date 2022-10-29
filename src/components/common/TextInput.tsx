@@ -27,8 +27,8 @@ const TextInput = ({
   const ref = useRef<HTMLInputElement | null>(null);
 
   return (
-    <div className={styles.input}>
-      <div>{iconPosition === 'left' && icon}</div>
+    <div className={`${styles.input} ${icon ? styles.iconInput : ''}`}>
+      <div className={styles.icon}>{iconPosition === 'left' && icon}</div>
       <input
         ref={ref}
         name="input"
@@ -37,7 +37,6 @@ const TextInput = ({
         onFocus={onFocus}
         onChange={onChange}
         onBlur={onBlur}
-        className={'input'}
       />
       <label htmlFor="input">{label}</label>
       <div>{iconPosition === 'right' && icon}</div>
