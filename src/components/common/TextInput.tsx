@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import './TextInput.scss';
+import styles from './TextInput.module.scss';
 
 interface PropsType {
   type: string;
@@ -27,7 +27,7 @@ const TextInput = ({
   const ref = useRef<HTMLInputElement | null>(null);
 
   return (
-    <div>
+    <div className={styles.input}>
       <div>{iconPosition === 'left' && icon}</div>
       <input
         ref={ref}
