@@ -34,14 +34,17 @@ const TestContainer = () => {
 
   return (
     <div>
-      <TextInput
-        placeholder="input text"
-        onFocus={onFocus}
-        type="text"
-        onChange={onChange}
-        onBlur={onBlur}
-        icon={<TestIcon />}
-      />
+      <div style={{ width: '800px' }}>
+        <br />
+        <TextInput
+          placeholder="input text"
+          onFocus={onFocus}
+          type="text"
+          onChange={onChange}
+          onBlur={onBlur}
+          icon={<TestIcon />}
+        />
+      </div>
     </div>
   );
 };
