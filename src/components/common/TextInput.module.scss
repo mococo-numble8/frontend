@@ -1,7 +1,54 @@
-.input {
-  color: red;
+.container {
+  position: relative;
+}
 
-  input {
-    //border: 1px solid red;
+.input {
+  width: 240px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 10px;
+  background-color: #F3F3F3;
+  box-sizing: border-box;
+
+}
+
+.text-input {
+  width: 200px;
+  height: 48px;
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  padding-left: 20px;
+
+
+  &::placeholder {
+    color: #9F9F9F;
+    line-height: 18px;
   }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.text-input-with-icon {
+  padding-left: 50px;
+  width: 170px;
+}
+
+.focused {
+  border: 3px solid #C7C7C7FF;
+}
+
+.valid {
+  border: 3px solid red;
+}
+
+.icon {
+  position: absolute;
+  left: 10px;
+  top: 8px;
 }

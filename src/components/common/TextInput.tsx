@@ -1,5 +1,6 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './TextInput.module.scss';
+import classNames from 'classnames/bind';
 
 interface PropsType {
   type: string;
@@ -11,8 +12,10 @@ interface PropsType {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onBlur?: (e: React.FocusEvent<HTMLInputElement, Element>) => void;
   icon?: React.ReactNode;
-  iconPosition?: string;
+  validation?: boolean;
 }
+
+const cx = classNames.bind(styles);
 
 const TextInput = ({
   type,
@@ -22,25 +25,35 @@ const TextInput = ({
   onChange,
   onBlur,
   icon,
-  iconPosition,
+  validation,
 }: PropsType) => {
   const ref = useRef<HTMLInputElement | null>(null);
+  const [isFocus, setFocus] = useState(false);
 
   return (
-    <div className={styles.input}>
-      <div>{iconPosition === 'left' && icon}</div>
+    <div className={styles.container}>
+      <div className={styles.icon}>{icon && icon}</div>
       <input
+        className={cx('text-input', { 'text-input-with-icon': icon })}
         ref={ref}
-        name="input"
+        name="text-input"
         type={type}
         placeholder={placeholder ? placeholder : ''}
-        onFocus={onFocus}
+        onFocus={e => {
+          // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+          onFocus && onFocus(e);
+          setFocus(true);
+        }}
         onChange={onChange}
-        onBlur={onBlur}
-        className={'input'}
+        onBlur={e => {
+          // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+          onBlur && onBlur(e);
+          setFocus(false);
+        }}
       />
-      <label htmlFor="input">{label}</label>
-      <div>{iconPosition === 'right' && icon}</div>
+      <div className={cx('input', { valid: validation, focused: isFocus })}>
+        <label htmlFor="input">{label}</label>
+      </div>
     </div>
   );
 };
