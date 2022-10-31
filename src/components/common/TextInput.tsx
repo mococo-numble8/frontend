@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './TextInput.module.scss';
 
 interface PropsType {
@@ -11,7 +11,6 @@ interface PropsType {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onBlur?: (e: React.FocusEvent<HTMLInputElement, Element>) => void;
   icon?: React.ReactNode;
-  iconPosition?: string;
 }
 
 const TextInput = ({
@@ -22,24 +21,31 @@ const TextInput = ({
   onChange,
   onBlur,
   icon,
-  iconPosition,
 }: PropsType) => {
   const ref = useRef<HTMLInputElement | null>(null);
+  const [isFocus, setFocus] = useState(false);
 
   return (
-    <div className={`${styles.input} ${icon ? styles.iconInput : ''}`}>
-      <div className={styles.icon}>{iconPosition === 'left' && icon}</div>
+    <div className={`${styles.input} ${isFocus ? styles.focused : ''}`}>
+      <div className={styles.icon}>{icon && icon}</div>
       <input
         ref={ref}
         name="input"
         type={type}
         placeholder={placeholder ? placeholder : ''}
-        onFocus={onFocus}
+        onFocus={e => {
+          // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+          onFocus ? onFocus(e) : null;
+          setFocus(true);
+        }}
         onChange={onChange}
-        onBlur={onBlur}
+        onBlur={e => {
+          // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+          onBlur ? onBlur(e) : null;
+          setFocus(false);
+        }}
       />
       <label htmlFor="input">{label}</label>
-      <div>{iconPosition === 'right' && icon}</div>
     </div>
   );
 };

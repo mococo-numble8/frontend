@@ -41,7 +41,6 @@ const TestContainer = () => {
         onChange={onChange}
         onBlur={onBlur}
         icon={<TestIcon />}
-        iconPosition="left"
       />
     </div>
   );
