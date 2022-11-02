@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import ComponentTestPage from './components/common/test/ComponentTestPage';
 import TestContainer from './components/common/test/TestContainer';
+import ModalSamplePage from 'pages/ModalSamplePage';
 
 const App: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const App: React.FC = () => {
         path="/test"
         element={<ComponentTestPage>{<TestContainer />}</ComponentTestPage>}
       />
+      <Route path="/modal" element={<ModalSamplePage />} />
     </Routes>
   );
 };
