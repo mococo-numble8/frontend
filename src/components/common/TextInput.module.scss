@@ -2,45 +2,32 @@
   position: relative;
 }
 
-.input {
-  width: 240px;
-  height: 48px;
+.text-input {
+  width: 15rem;
+  height: 3rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   border-radius: 10px;
   background-color: #F3F3F3;
   box-sizing: border-box;
-
-}
-
-.text-input {
-  width: 200px;
-  height: 48px;
-  position: absolute;
   border: none;
-  background-color: transparent;
-  font-size: 16px;
-  padding-left: 20px;
-
+  padding: 0 1rem;
+  font-size: 1rem;
 
   &::placeholder {
     color: #9F9F9F;
-    line-height: 18px;
+    font-size: 1rem;
   }
 
   &:focus {
+    border: 3px solid #bdc3c7;
     outline: none;
   }
 }
 
-.text-input-with-icon {
-  padding-left: 50px;
-  width: 170px;
-}
-
-.focused {
-  border: 3px solid #C7C7C7FF;
+.text-input__with-icon {
+  padding-left: 3rem;
 }
 
 .valid {
@@ -50,5 +37,5 @@
 .icon {
   position: absolute;
   left: 10px;
-  top: 8px;
+  top: 9px;
 }
