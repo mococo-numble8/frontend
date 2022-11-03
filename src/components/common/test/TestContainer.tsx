@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import TextInput from '../TextInput';
 import Button from '../Button';
 import ToggleButton from '../ToggleButton';
+import FloatingButton from '../FloatingButton';
 
 const TestIcon = () => {
   return (
@@ -30,6 +31,12 @@ const TestContainer = () => {
     console.log(e.currentTarget.value);
   };
 
+  const floatingOnClick = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+  ) => {
+    console.log(e);
+  };
+
   useEffect(() => {
     console.log(input);
   }, [input]);
@@ -51,6 +58,8 @@ const TestContainer = () => {
       </div>
       <br />
       <ToggleButton></ToggleButton>
+      <br />
+      <FloatingButton onClick={floatingOnClick} icon={<TestIcon />} />
     </div>
   );
 };
