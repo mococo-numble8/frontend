@@ -1,0 +1,37 @@
+.toggle {
+
+}
+
+.toggle-switch {
+  display: block;
+  position: relative;
+  width: 3.3rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background-color: red;
+  cursor: pointer;
+}
+
+.toggle-switch .toggle-button {
+  width: 1.6rem;
+  height: 1.6rem;
+  position: absolute;
+  top: 50%;
+  left: 0.2rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: white;
+}
+
+.toggle:checked ~ .toggle-switch {
+  background-color: blue;
+}
+
+.toggle:checked ~ .toggle-switch .toggle-button {
+  left: calc(100% - 1.8rem);
+  background-color: #fff;
+}
+
+.toggle-switch, .toggle-button {
+  transition: all 0.2s ease-in;
+}

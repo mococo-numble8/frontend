@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import TextInput from '../TextInput';
+import Button from '../Button';
+import ToggleButton from '../ToggleButton';
 
 const TestIcon = () => {
   return (
@@ -44,7 +46,11 @@ const TestContainer = () => {
           onBlur={onBlur}
           icon={<TestIcon />}
         />
+        <br />
+        <Button disabled={false}>Button</Button>
       </div>
+      <br />
+      <ToggleButton></ToggleButton>
     </div>
   );
 };
