@@ -6,7 +6,7 @@ const TestIcon = () => {
     <div>
       <img
         src={`${process.env.PUBLIC_URL}/images/logo192.png`}
-        width="32px"
+        width="28px"
         alt="icon"
       />
     </div>
