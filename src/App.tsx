@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import ComponentTestPage from './components/common/test/ComponentTestPage';
 import TestContainer from './components/common/test/TestContainer';
 import ModalSamplePage from 'pages/ModalSamplePage';
+import ComponentSamplePage from 'pages/ComponentSamplePage';
 
 const App: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
         element={<ComponentTestPage>{<TestContainer />}</ComponentTestPage>}
       />
       <Route path="/modal" element={<ModalSamplePage />} />
+      <Route path="/components" element={<ComponentSamplePage />} />
     </Routes>
   );
 };
