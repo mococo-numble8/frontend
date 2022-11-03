@@ -1,4 +1,8 @@
 import { PropsWithChildren } from 'react';
+import styles from './Button.module.scss';
+import classNames from 'classnames/bind';
+
+const cx = classNames.bind(styles);
 
 type PropsType = PropsWithChildren<{
   className?: string;
@@ -6,12 +10,13 @@ type PropsType = PropsWithChildren<{
   disabled?: boolean;
 }>;
 
-const Button: React.FC<PropsType> = (props) => {
+const Button: React.FC<PropsType> = props => {
   const { disabled, children, ...rest } = props;
- 
+
   return (
     <button
       type="button"
+      className={cx('common-button', { disabled: disabled })}
       disabled={disabled}
       aria-disabled={disabled}
       {...rest}
