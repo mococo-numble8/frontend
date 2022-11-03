@@ -17,7 +17,7 @@ const Modal: React.FC<PropsType> = props => {
   return (
     <Overlay>
       <div className={styles.modal}>
-        {props.icon}
+        {props.icon && <div>{props.icon}</div>}
         <div>
           <h1>{props.title}</h1>
           <p>{props.desc}</p>
