@@ -5,7 +5,7 @@ import ComponentTestPage from './components/common/test/ComponentTestPage';
 import TestContainer from './components/common/test/TestContainer';
 import ModalSamplePage from 'pages/ModalSamplePage';
 import ComponentSamplePage from 'pages/ComponentSamplePage';
-import LoginPage from 'pages/LoginPage';
+import LoginPage from 'pages/LoginPage/LoginPage';
 import JoinPage from 'pages/JoinPage';
 import ProfilePage from 'pages/ProfilePage';
 
