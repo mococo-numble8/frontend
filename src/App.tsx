@@ -8,6 +8,7 @@ import ComponentSamplePage from 'pages/ComponentSamplePage';
 import LoginPage from 'pages/LoginPage';
 import JoinPage from 'pages/JoinPage';
 import ProfilePage from 'pages/ProfilePage';
+import OnboardingPage from 'pages/OnboardingPage';
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
       />
       <Route path="/modal" element={<ModalSamplePage />} />
       <Route path="/components" element={<ComponentSamplePage />} />
+      <Route path="/onboarding" element={<OnboardingPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/join" element={<JoinPage />} />
       <Route path="/profile" element={<ProfilePage />} />
