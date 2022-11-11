@@ -1,18 +1,19 @@
 .container {
   position: relative;
+  width: 100%;
 }
 
 .common-button {
-  width: 15rem;
+  width: 100%;
   height: 3rem;
-  color: #000;
   border-radius: 10px;
-  background-color: #2196f3;
+  background-color: #4B71A9;
   box-sizing: border-box;
   font-size: 1.1rem;
   border: none;
   background-position: center;
   transition: background-color 0.8s;
+  color: white;
 
   &:hover {
     background-color: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
@@ -23,6 +24,10 @@
     background-size: 100%;
     transition: background-color 0s;
   }
+}
+
+.rounded {
+  border-radius: 1.5rem;
 }
 
 .disabled {

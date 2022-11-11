@@ -1,9 +1,10 @@
 .container {
   position: relative;
+  width: 100%;
 }
 
 .text-input {
-  width: 15rem;
+  width: 100%;
   height: 3rem;
   display: flex;
   align-items: center;
@@ -24,6 +25,14 @@
     border: 3px solid #bdc3c7;
     outline: none;
   }
+}
+
+.rounded {
+  border-radius: 1.5rem;
+}
+
+.background-white {
+  background-color: #fff !important;
 }
 
 .text-input__with-icon {

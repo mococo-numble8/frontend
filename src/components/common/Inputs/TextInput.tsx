@@ -12,6 +12,8 @@ interface PropsType {
   onBlur?: (e: React.FocusEvent<HTMLInputElement, Element>) => void;
   icon?: React.ReactNode;
   validation?: boolean;
+  rounded?: boolean;
+  backgroundWhite?: boolean;
 }
 
 const cx = classNames.bind(styles);
@@ -24,8 +26,9 @@ const TextInput = ({
   onBlur,
   icon,
   validation,
+  rounded,
+  backgroundWhite,
 }: PropsType) => {
-
   return (
     <div className={styles.container}>
       <div className={styles.icon}>{icon && icon}</div>
@@ -35,6 +38,8 @@ const TextInput = ({
           'text-input',
           { 'text-input__with-icon': icon },
           { valid: validation },
+          { rounded: rounded },
+          { 'background-white': backgroundWhite },
         )}
         placeholder={placeholder}
         onFocus={onFocus}

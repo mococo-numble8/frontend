@@ -8,15 +8,20 @@ type PropsType = PropsWithChildren<{
   className?: string;
   onClick?: React.MouseEventHandler<HTMLElement>;
   disabled?: boolean;
+  rounded?: boolean;
 }>;
 
 const Button: React.FC<PropsType> = props => {
-  const { disabled, children, ...rest } = props;
+  const { disabled, children, rounded, ...rest } = props;
 
   return (
     <button
       type="button"
-      className={cx('common-button', { disabled: disabled })}
+      className={cx(
+        'common-button',
+        { disabled: disabled },
+        { rounded: rounded },
+      )}
       disabled={disabled}
       aria-disabled={disabled}
       {...rest}
