@@ -6,7 +6,7 @@ import TestContainer from './components/common/test/TestContainer';
 import ModalSamplePage from 'pages/ModalSamplePage';
 import ComponentSamplePage from 'pages/ComponentSamplePage';
 import LoginPage from 'pages/LoginPage/LoginPage';
-import JoinPage from 'pages/JoinPage';
+import JoinPage from 'pages/JoinPage/JoinPage';
 import ProfilePage from 'pages/ProfilePage';
 
 const App: React.FC = () => {
