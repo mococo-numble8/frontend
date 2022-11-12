@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import TextInput from '../TextInput';
+import TextInput from '../Inputs/TextInput';
 import Button from '../Button';
-import ToggleButton from '../ToggleButton';
+import ToggleButton from '../Inputs/ToggleButton';
 import FloatingButton from '../FloatingButton';
 
 const TestIcon = () => {
