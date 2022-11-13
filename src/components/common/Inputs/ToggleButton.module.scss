@@ -8,7 +8,7 @@
   width: 3.3rem;
   height: 2rem;
   border-radius: 1rem;
-  background-color: red;
+  background-color: #CCCCCC;
   cursor: pointer;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .toggle:checked ~ .toggle-switch {
-  background-color: blue;
+  background-color: #C0D0FC;
 }
 
 .toggle:checked ~ .toggle-switch .toggle-button {
