@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './LoginPage.module.scss';
 import Container from 'components/common/Containers/Container';
-import TextInput from '../../components/common/Inputs/TextInput';
-import ToggleButton from '../../components/common/Inputs/ToggleButton';
-import Button from '../../components/common/Button';
+import TextInput from 'components/common/Inputs/TextInput';
+import ToggleButton from 'components/common/Buttons/ToggleButton';
+import Button from 'components/common/Buttons/Button';
 
 const LoginPage = () => {
   return (

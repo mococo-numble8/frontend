@@ -1,10 +1,7 @@
 import React from 'react';
 import styles from './JoinPage.module.scss';
-import TextInput from '../../components/common/Inputs/TextInput';
-import Button from '../../components/common/Button';
-// interface PropsType {
-//
-// };
+import TextInput from 'components/common/Inputs/TextInput';
+import Button from 'components/common/Buttons/Button';
 
 const SignUp = () => {
   return (

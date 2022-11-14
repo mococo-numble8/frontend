@@ -1,6 +1,8 @@
 .layout {
+  height: 100%;
+
   &.default {
-    padding: 2rem;
+    padding: 1rem;
   }
 
   &.fit {
@@ -20,4 +22,12 @@
       width: 100%;
     }
   }
+}
+
+.use-navigation {
+  padding-top: 4rem;
+}
+
+.onboarding {
+  background-color: #F9F7F7;
 }

@@ -1,8 +1,5 @@
 import React from 'react';
 import styles from './FloatingButton.module.scss';
-import classNames from 'classnames/bind';
-
-const cx = classNames.bind(styles);
 
 interface PropsType {
   icon: React.ReactNode;
