@@ -1,20 +1,16 @@
-.toggle {
-
-}
-
 .toggle-switch {
   display: block;
   position: relative;
-  width: 3.3rem;
-  height: 2rem;
-  border-radius: 1rem;
+  width: 2.5rem;
+  height: 1.5rem;
+  border-radius: 0.75rem;
   background-color: #CCCCCC;
   cursor: pointer;
 }
 
 .toggle-switch .toggle-button {
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.2rem;
+  height: 1.2rem;
   position: absolute;
   top: 50%;
   left: 0.2rem;
@@ -28,7 +24,7 @@
 }
 
 .toggle:checked ~ .toggle-switch .toggle-button {
-  left: calc(100% - 1.8rem);
+  left: calc(100% - 1.4rem);
   background-color: #fff;
 }
 
