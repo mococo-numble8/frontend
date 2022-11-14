@@ -17,7 +17,7 @@ const SignUp = () => {
             />
           </div>
           <div className={styles['button-item']}>
-            <Button isSignup>중복확인</Button>
+            <Button isSecondary>중복확인</Button>
           </div>
         </div>
       </div>
@@ -43,7 +43,7 @@ const SignUp = () => {
             <TextInput type="text" backgroundWhite placeholder="닉네임 입력." />
           </div>
           <div className={styles['button-item']}>
-            <Button isSignup>중복확인</Button>
+            <Button isSecondary>중복확인</Button>
           </div>
         </div>
       </div>
