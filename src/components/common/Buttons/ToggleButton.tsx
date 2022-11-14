@@ -1,8 +1,5 @@
 import React from 'react';
 import styles from './ToggleButton.module.scss';
-import classNames from 'classnames/bind';
-
-const cx = classNames.bind(styles);
 
 interface PropsType {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;

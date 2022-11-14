@@ -26,7 +26,6 @@ const Button: React.FC<PropsType> = props => {
       )}
       disabled={disabled}
       aria-disabled={disabled}
-      {...rest}
     >
       {children}
     </button>

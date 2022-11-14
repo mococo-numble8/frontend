@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import TextInput from '../Inputs/TextInput';
-import Button from '../Button';
-import ToggleButton from '../Inputs/ToggleButton';
-import FloatingButton from '../FloatingButton';
+import Button from '../Buttons/Button';
+import ToggleButton from '../Buttons/ToggleButton';
+import FloatingButton from '../Buttons/FloatingButton';
 
 const TestIcon = () => {
   return (
