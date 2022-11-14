@@ -3,10 +3,6 @@ import TextInput from '../../components/common/Inputs/TextInput';
 import Icon from '../../components/common/Icon/Icon';
 import styles from './JoinPage.module.scss';
 
-// interface PropsType {
-//
-// }
-
 const SelectLocation = () => {
   return (
     <>

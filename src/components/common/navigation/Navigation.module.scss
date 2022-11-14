@@ -1,9 +1,26 @@
-.nav {
-  position: fixed;
+.container {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 5rem;
-  background-color: gray;
-  z-index: 10;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+  background-color: white;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.icon {
+  position: absolute;
+  left: 1rem;
+}
+
+.onboarding {
+  background-color: #F9F7F7;
 }

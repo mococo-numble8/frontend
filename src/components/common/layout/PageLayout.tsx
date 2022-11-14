@@ -5,14 +5,21 @@ import styles from './PageLayout.module.scss';
 
 type PropsType = PropsWithChildren<{
   navigation: boolean;
+  onboarding?: boolean;
+  title?: string;
 }>;
 
 const cx = classNames.bind(styles);
 
-const PageLayout: React.FC<PropsType> = ({ navigation, children }) => {
+const PageLayout: React.FC<PropsType> = ({
+  navigation,
+  children,
+  onboarding = false,
+  title = '회원가입',
+}) => {
   return (
     <>
-      {navigation && <Navigation />}
+      {navigation && <Navigation title={title} onboarding={onboarding} />}
       {children}
     </>
   );
@@ -20,7 +27,12 @@ const PageLayout: React.FC<PropsType> = ({ navigation, children }) => {
 
 const Fit: React.FC<PropsType> = props => {
   return (
-    <div className={cx(styles.layout, styles.fit)}>
+    <div
+      className={cx(styles.layout, styles.fit, {
+        'use-navigation': props.navigation,
+        onboarding: props.onboarding,
+      })}
+    >
       <PageLayout {...props} />
     </div>
   );
@@ -28,7 +40,12 @@ const Fit: React.FC<PropsType> = props => {
 
 const Default: React.FC<PropsType> = props => {
   return (
-    <div className={cx(styles.layout, styles.default)}>
+    <div
+      className={cx(styles.layout, styles.default, {
+        'use-navigation': props.navigation,
+        onboarding: props.onboarding,
+      })}
+    >
       <PageLayout {...props} />
     </div>
   );
