@@ -15,8 +15,8 @@ const ModalSamplePage: React.FC = () => {
           title="Title"
           desc="description"
           buttons={[
-            { label: 'action' },
-            { label: 'close', onClick: closeModal },
+            { label: 'action', isSecondary: true, rounded: true },
+            { label: 'close', onClick: closeModal, rounded: true },
           ]}
         />
       </div>
