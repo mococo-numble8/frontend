@@ -7,6 +7,7 @@ type PropsType = PropsWithChildren<{
   navigation: boolean;
   onboarding?: boolean;
   title?: string;
+  navIcon?: React.ReactNode;
 }>;
 
 const cx = classNames.bind(styles);
@@ -16,10 +17,13 @@ const PageLayout: React.FC<PropsType> = ({
   children,
   onboarding = false,
   title = '',
+  navIcon,
 }) => {
   return (
     <>
-      {navigation && <Navigation title={title} onboarding={onboarding} />}
+      {navigation && (
+        <Navigation icon={navIcon} title={title} onboarding={onboarding} />
+      )}
       {children}
     </>
   );

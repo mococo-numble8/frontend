@@ -14,9 +14,7 @@ interface PropsType {
 const Navigation = ({ icon, title, onboarding }: PropsType) => {
   return (
     <div className={cx(styles.container, { onboarding: onboarding })}>
-      <div className={styles.icon}>
-        <Icon className="medium" alt="location" name="Icon-location"></Icon>
-      </div>
+      <div className={styles.icon}>{icon && icon}</div>
       <div className={styles.title}>{title}</div>
     </div>
   );
