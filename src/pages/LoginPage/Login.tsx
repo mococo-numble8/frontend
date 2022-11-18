@@ -14,18 +14,8 @@ const Login = () => {
         <h1>Mococo</h1>
       </div>
       <div className={styles['input-form']}>
-        <TextInput
-          type="text"
-          rounded
-          backgroundWhite
-          placeholder="아이디"
-        ></TextInput>
-        <TextInput
-          type="password"
-          rounded
-          backgroundWhite
-          placeholder="비밀번호"
-        ></TextInput>
+        <TextInput type="text" rounded placeholder="아이디"></TextInput>
+        <TextInput type="password" rounded placeholder="비밀번호"></TextInput>
         <div className={styles.toggle}>
           <ToggleButton></ToggleButton>
           <div className="label">로그인 상태유지</div>

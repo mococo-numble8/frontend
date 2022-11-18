@@ -1,3 +1,5 @@
+@import 'src/variables.scss';
+
 .container {
   position: relative;
   width: 100%;
@@ -12,8 +14,9 @@
   border: none;
   background-position: center;
   transition: background-color 0.8s;
-  color: white;
-  background-color: #4B71A9;
+  color: $white;
+  //background-color: #4B71A9;
+  background-color: $primary-color;
 
   &:hover {
     background-color: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
@@ -31,19 +34,19 @@
 }
 
 .signup-type {
-  color: #191919;
-  background-color: #DCE2EE;
+  color: $black;
+  background-color: $secondary-color;
 }
 
 .disabled {
-  color: grey;
-  background-color: #DCE2EE;
+  color: $gray;
+  background-color: $mid-gray;
 
   &:hover {
-    background-color: #DCE2EE;
+    background-color: $secondary-color;
   }
 
   &:active {
-    background-color: #DCE2EE;
+    background-color: $secondary-color;
   }
 }

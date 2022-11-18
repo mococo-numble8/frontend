@@ -5,7 +5,7 @@ import PageLayout from 'components/common/layout/PageLayout';
 
 const JoinPage = () => {
   return (
-    <PageLayout.Default title="회원가입" navigation onboarding>
+    <PageLayout.Default title="회원가입" navigation>
       <SignUp />
     </PageLayout.Default>
   );
