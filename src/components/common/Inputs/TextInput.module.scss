@@ -1,3 +1,5 @@
+@import 'src/variables.scss';
+
 .container {
   position: relative;
   width: 100%;
@@ -10,19 +12,19 @@
   align-items: center;
   justify-content: flex-start;
   border-radius: 10px;
-  background-color: #F3F3F3;
+  background-color: $secondary-light;
   box-sizing: border-box;
   border: none;
   padding: 0 1rem;
   font-size: 1rem;
 
   &::placeholder {
-    color: #9F9F9F;
+    color: $mid-gray;
     font-size: 1rem;
   }
 
   &:focus {
-    border: 3px solid #bdc3c7;
+    border: 2px solid $mid-gray;
     outline: none;
   }
 }
@@ -32,7 +34,7 @@
 }
 
 .background-white {
-  background-color: #fff !important;
+  background-color: $white !important;
 }
 
 .text-input__with-icon {
@@ -40,7 +42,7 @@
 }
 
 .valid {
-  border: 3px solid red;
+  border: 3px solid $error-color;
 }
 
 .icon {

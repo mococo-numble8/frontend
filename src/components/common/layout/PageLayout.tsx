@@ -15,7 +15,7 @@ const PageLayout: React.FC<PropsType> = ({
   navigation,
   children,
   onboarding = false,
-  title = '회원가입',
+  title = '',
 }) => {
   return (
     <>
