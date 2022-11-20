@@ -12,22 +12,21 @@ import LoginPage from 'pages/LoginPage/LoginPage';
 import JoinPage from 'pages/JoinPage/JoinPage';
 import ProfilePage from 'pages/ProfilePage';
 import OnboardingPage from 'pages/OnboardingPage';
+import KakaoMapPage from 'pages/KakaoMapPage';
 
 const App: React.FC = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route
-          path="/test"
-          element={<ComponentTestPage>{<TestContainer />}</ComponentTestPage>}
-        />
+        <Route path="/test" element={<ComponentTestPage>{<TestContainer />}</ComponentTestPage>} />
         <Route path="/modal" element={<ModalSamplePage />} />
         <Route path="/components" element={<ComponentSamplePage />} />
         <Route path="/onboarding" element={<OnboardingPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/join" element={<JoinPage />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/kakao" element={<KakaoMapPage />} />
       </Routes>
       <ReactQueryDevtools />
     </QueryClientProvider>
