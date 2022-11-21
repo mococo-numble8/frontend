@@ -4,6 +4,7 @@ import { useModal } from 'hooks/ui/useModal';
 import Avatar from 'components/common/avatar/avatar';
 import ListItem from '../components/combine/listItem/ListItem';
 import Tag from '../components/common/tag/Tag';
+import FloatingButton from '../components/common/Buttons/FloatingButton';
 
 const ModalSamplePage: React.FC = () => {
   const { openModal, closeModal } = useModal();
@@ -14,6 +15,10 @@ const ModalSamplePage: React.FC = () => {
       <button onClick={openModal}>open modal</button>
       <Avatar name="sungho2.jpg" />
       <ListItem title="합정역 코딩 같이 하실분 계신가요?" />
+      <FloatingButton
+        icon={<Icon name="cross" alt="floating-button" />}
+        onClick={() => console.log('dd')}
+      />
       <div>
         <Modal
           icon={<Icon name="warning" alt="warning" className="large" />}
