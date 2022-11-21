@@ -2,6 +2,7 @@
   position: relative;
   width: 3rem;
   height: 3rem;
+  display: flex;
 }
 
 .button {
@@ -27,7 +28,7 @@
 
 .icon {
   position: absolute;
-  top: calc(3rem - 50% - 16px);
-  left: calc(3rem - 50% - 16px);
+  top: calc(3rem - 50% - 0.88rem);
+  left: calc(3rem - 50% - 0.88rem);
   pointer-events: none;
 }

@@ -1,0 +1,29 @@
+@import 'src/variables.scss';
+
+.container {
+  height: 1.2rem;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.6rem;
+  color: $gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.7rem;
+  background-color: $light-gray;
+}
+
+.primary {
+  background-color: $primary-color;
+}
+
+.secondary {
+  background-color: $secondary-color;
+}
+
+.success {
+  background-color: $success-color;
+}
+
+.warning {
+  background-color: $warning-color;
+}
