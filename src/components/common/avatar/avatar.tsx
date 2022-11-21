@@ -16,7 +16,7 @@ const Avatar = ({ name, alt, icon }: PropsType) => {
         src={name ? `/images/${name}` : '/vectors/user.svg'}
         alt={alt}
       />
-      {icon && icon}
+      {/*{icon && icon}*/}
       <img
         className={styles.container__icon}
         src={'/vectors/heart.svg'}
