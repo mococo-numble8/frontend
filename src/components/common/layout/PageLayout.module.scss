@@ -1,0 +1,33 @@
+.layout {
+  height: 100%;
+
+  &.default {
+    padding: 1rem;
+  }
+
+  &.fit {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 1.5rem;
+    overflow: hidden;
+
+    main {
+      display: flex;
+      flex-direction: column;
+      flex: 0.8;
+      justify-content: space-around;
+      width: 100%;
+    }
+  }
+}
+
+.use-navigation {
+  padding-top: 4rem;
+}
+
+.onboarding {
+  background-color: #F9F7F7;
+}

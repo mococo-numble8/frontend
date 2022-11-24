@@ -1,0 +1,35 @@
+@import 'src/variables.scss';
+
+.toggle-switch {
+  display: block;
+  position: relative;
+  width: 2.5rem;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+  background-color: $mid-gray;
+  cursor: pointer;
+}
+
+.toggle-switch .toggle-button {
+  width: 1.2rem;
+  height: 1.2rem;
+  position: absolute;
+  top: 50%;
+  left: 0.2rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: white;
+}
+
+.toggle:checked ~ .toggle-switch {
+  background-color: $secondary-color;
+}
+
+.toggle:checked ~ .toggle-switch .toggle-button {
+  left: calc(100% - 1.4rem);
+  background-color: $white;
+}
+
+.toggle-switch, .toggle-button {
+  transition: all 0.2s ease-in;
+}
