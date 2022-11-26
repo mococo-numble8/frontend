@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PageLayout from '../components/common/layout/PageLayout';
+import PageLayout from '../components/common/Layout/PageLayout';
 
 const OnboardingPage = () => {
   return (
-    <PageLayout.Fit navigation={false}>
+    <PageLayout.Fit>
       <main>
         <h1>모여서 코딩하자</h1>
         <div>

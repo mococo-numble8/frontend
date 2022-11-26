@@ -1,8 +1,10 @@
+@import 'src/variables.scss';
+
 .layout {
   height: 100%;
 
   &.default {
-    padding: 1rem;
+    padding: 1.5rem;
   }
 
   &.fit {
@@ -22,12 +24,8 @@
       width: 100%;
     }
   }
-}
 
-.use-navigation {
-  padding-top: 4rem;
-}
-
-.onboarding {
-  background-color: #F9F7F7;
+  &.use-navigation {
+    padding-top: $nav-height;
+  }
 }
