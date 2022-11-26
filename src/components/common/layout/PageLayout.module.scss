@@ -1,7 +1,9 @@
 @import 'src/variables.scss';
 
 .layout {
+  max-width: $mobile-width;
   height: 100%;
+  margin: auto;
 
   &.default {
     padding: 1.5rem;

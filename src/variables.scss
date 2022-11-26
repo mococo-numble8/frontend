@@ -1,10 +1,13 @@
 /** ----- typography ----- */
 // weight
 $bold: 700;
+$medium: 500;
 $regular: 400;
 
 // font-size
 $fonts-bold: 25, 20, 18, 15;
+$fonts-medium: 20, 18, 12;
+$fonts-regular: 15, 13, 12;
 
 /** ----- colors ----- */
 $primary-color: #4b71a9;
@@ -15,10 +18,12 @@ $warning-color: #f6c963;
 $error-color: #c53923;
 $accent-color: #dc2828;
 $white: #ffffff;
+$text-gray: #9f9f9f;
 $light-gray: #e6e6e6;
 $mid-gray: #cccccc;
 $gray: #666666;
 $black: #191919;
 
 /** ----- size ----- */
+$mobile-width: 48rem;
 $nav-height: 4.8rem;
