@@ -1,12 +1,24 @@
-$primary-color: #4B71A9;
-$secondary-color: #DCE2EE;
-$secondary-light: #F9F7F7;
-$success-color: #80CC65;
-$warning-color: #F6C963;
-$error-color: #C53923;
-$accent-color: #DC2828;
+/** ----- typography ----- */
+// weight
+$bold: 700;
+$regular: 400;
+
+// font-size
+$fonts-bold: 25, 20, 18, 15;
+
+/** ----- colors ----- */
+$primary-color: #4b71a9;
+$secondary-color: #dce2ee;
+$secondary-light: #f9f7f7;
+$success-color: #80cc65;
+$warning-color: #f6c963;
+$error-color: #c53923;
+$accent-color: #dc2828;
 $white: #ffffff;
-$light-gray: #E6E6E6;
-$mid-gray: #CCCCCC;
+$light-gray: #e6e6e6;
+$mid-gray: #cccccc;
 $gray: #666666;
 $black: #191919;
+
+/** ----- size ----- */
+$nav-height: 4.8rem;
