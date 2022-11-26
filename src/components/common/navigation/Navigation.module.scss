@@ -6,10 +6,7 @@
   left: 0;
   width: 100%;
   height: $nav-height;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem 0;
+
   background-color: white;
 
   &.primary {
@@ -24,6 +21,18 @@
     right: 1rem;
     color: $primary-color;
     z-index: 5;
+  }
+
+  .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 48rem;
+    height: 100%;
+    margin: auto;
+    padding: 0.5rem 0;
   }
 }
 

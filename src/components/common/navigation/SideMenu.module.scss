@@ -1,0 +1,77 @@
+@import 'src/variables.scss';
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+  max-width: calc($mobile-width * 0.75);
+  height: 100%;
+  padding-top: 3rem;
+  background-color: $white;
+  z-index: 200;
+}
+
+.close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  cursor: pointer;
+}
+
+.box {
+  padding: 2.7rem 2.4rem;
+
+  & + & {
+    border-top: 1px solid $light-gray;
+  }
+
+  button {
+    color: $text-gray;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.nickname {
+  display: flex;
+
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.8rem;
+    height: 4.8rem;
+    background-color: $light-gray;
+    border-radius: 50%;
+  }
+
+  .user {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 1.4rem;
+
+    span {
+      color: $text-gray;
+    }
+  }
+}
+
+.list {
+  a {
+    padding: 1.6rem 0;
+    display: block;
+  }
+
+  &:first-child a {
+    padding-top: 0;
+  }
+
+  &:last-child a {
+    padding-bottom: 0;
+  }
+}

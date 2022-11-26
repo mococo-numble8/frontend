@@ -108,6 +108,11 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 blockquote,
 q {
   quotes: none;
@@ -134,5 +139,19 @@ table {
   .bold-#{$font} {
     font-size: #{$font/10}rem;
     font-weight: $bold;
+  }
+}
+
+@each $font in $fonts-medium {
+  .medium-#{$font} {
+    font-size: #{$font/10}rem;
+    font-weight: $medium;
+  }
+}
+
+@each $font in $fonts-regular {
+  .regular-#{$font} {
+    font-size: #{$font/10}rem;
+    font-weight: $regular;
   }
 }

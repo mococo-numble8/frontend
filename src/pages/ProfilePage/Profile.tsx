@@ -1,19 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styles from './Profile.module.scss';
 import Avatar from 'components/common/avatar/avatar';
 import TextInput from 'components/common/Inputs/TextInput';
 import Button from 'components/common/Buttons/Button';
-import { useModal } from 'hooks/ui/useModal';
 import { useStore } from '../../store/store';
-import { useLocation } from 'react-router-dom';
-
-// interface PropsType {
-//   modify: boolean;
-// }
 
 const Profile = () => {
-  const { isProfileModify, setProfileModify } = useStore();
-  const { openModal, closeModal } = useModal();
+  const { isProfileModify } = useStore();
 
   return (
     <div className={styles.container}>
@@ -30,11 +23,7 @@ const Profile = () => {
       </div>
       <div className={styles.section}>
         <p className={styles.label}>포지션</p>
-        <TextInput
-          type="text"
-          rounded
-          placeholder="당신의 포지션을 입력해주세요."
-        />
+        <TextInput type="text" rounded placeholder="당신의 포지션을 입력해주세요." />
       </div>
       <div className={styles.footer}>
         <div>
