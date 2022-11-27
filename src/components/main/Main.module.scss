@@ -1,0 +1,39 @@
+@import 'src/variables.scss';
+
+.search-header {
+  height: 12rem;
+  background: $primary-color;
+  padding: 1.7rem 1.5rem;
+
+  .location {
+    height: 2rem;
+    color: $white;
+  }
+
+  .search-button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    margin-top: 1.7rem;
+    padding: 0 2.4rem;
+    background: $white;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+
+    span {
+      margin-left: 1.6rem;
+      color: $text-gray;
+    }
+  }
+}
+
+.tab {
+  display: flex;
+  padding: 2.4rem 1.5rem;
+}
+
+.banner {
+  width: 100%;
+}

@@ -1,5 +1,5 @@
 import KakaoMap from 'components/common/Kakao/KakaoMap';
-import CurrentLocation from 'components/CurrentLocation/CurrentLocation';
+import CurrentLocation from 'components/main/CurrentLocation';
 
 const KakaoMapPage = () => {
   return (

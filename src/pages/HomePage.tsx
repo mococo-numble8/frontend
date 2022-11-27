@@ -4,6 +4,7 @@ import React from 'react';
 import PageLayout from 'components/common/Layout/PageLayout';
 import Icon from 'components/common/Icon/Icon';
 import { useOverlay } from 'hooks/ui/useOverlay';
+import Main from 'components/main/Main';
 
 const HomePage: React.FC = () => {
   const { openOverlay } = useOverlay();
@@ -20,8 +21,8 @@ const HomePage: React.FC = () => {
   };
 
   return (
-    <PageLayout.Default navigation navigationOption={navigationOption}>
-      <div>Main</div>
+    <PageLayout.Default noPadding navigation navigationOption={navigationOption}>
+      <Main />
     </PageLayout.Default>
   );
 };
