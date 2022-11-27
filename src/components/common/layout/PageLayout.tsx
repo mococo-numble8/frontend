@@ -6,6 +6,7 @@ import styles from './PageLayout.module.scss';
 type PropsType = PropsWithChildren<{
   navigation?: boolean;
   navigationOption?: UiType.NavigationOptions;
+  noPadding?: boolean;
 }>;
 
 const cx = classNames.bind(styles);
@@ -34,9 +35,13 @@ const Fit: React.FC<PropsType> = props => {
 const Default: React.FC<PropsType> = props => {
   return (
     <div
-      className={cx(styles.layout, styles.default, {
-        [styles['use-navigation']]: props.navigation,
-      })}
+      className={cx(
+        styles.layout,
+        { [styles.padding]: !props.noPadding },
+        {
+          [styles['use-navigation']]: props.navigation,
+        },
+      )}
     >
       <PageLayout {...props} />
     </div>

@@ -1,11 +1,12 @@
 @import 'src/variables.scss';
 
 .layout {
+  position: relative;
   max-width: $mobile-width;
   height: 100%;
   margin: auto;
 
-  &.default {
+  &.padding {
     padding: 1.5rem;
   }
 
@@ -28,6 +29,6 @@
   }
 
   &.use-navigation {
-    padding-top: $nav-height;
+    padding-top: calc($nav-height - 1px);
   }
 }

@@ -1,0 +1,21 @@
+@import 'src/variables.scss';
+
+.multi-tag {
+  padding: 0.8rem 1.2rem;
+  background: $tag-gray;
+  border-radius: 1.7rem;
+
+  input[type='checkbox'] {
+    display: none;
+  }
+
+  &.checked {
+    background-color: $primary-color;
+    font-weight: $bold;
+    color: $white;
+  }
+
+  & + & {
+    margin-left: 0.8rem;
+  }
+}
