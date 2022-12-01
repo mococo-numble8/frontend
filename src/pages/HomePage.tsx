@@ -1,17 +1,29 @@
 import { testFetch } from 'api/axios/map';
 import { useQueryData } from 'hooks/modules/useRequest';
 import React from 'react';
-import Button from '../components/common/Buttons/Button';
+import PageLayout from 'components/common/Layout/PageLayout';
+import Icon from 'components/common/Icon/Icon';
+import { useOverlay } from 'hooks/ui/useOverlay';
+import Main from 'components/main/Main';
 
 const HomePage: React.FC = () => {
+  const { openOverlay } = useOverlay();
   const { data } = useQueryData(['test'], testFetch);
   console.log(data);
 
+  const navigationOption = {
+    title: 'Mococo',
+    color: 'primary',
+    left: {
+      element: <Icon name="menu" alt="menu" />,
+      onClick: openOverlay,
+    },
+  };
+
   return (
-    <>
-      <h1>Home</h1>
-      <Button>버튼</Button>
-    </>
+    <PageLayout.Default noPadding navigation navigationOption={navigationOption}>
+      <Main />
+    </PageLayout.Default>
   );
 };
 

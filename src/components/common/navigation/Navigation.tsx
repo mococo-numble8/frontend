@@ -1,40 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styles from './Navigation.module.scss';
-import Icon from 'components/common/Icon/Icon';
 import classNames from 'classnames/bind';
-import { useStore } from '../../../store/store';
-import { useLocation } from 'react-router-dom';
+import SideMenu from './SideMenu';
 
 const cx = classNames.bind(styles);
 
-interface PropsType {
-  icon?: React.ReactNode;
-  title: string;
-  onboarding?: boolean;
-}
-
-const Navigation = ({ icon, title, onboarding }: PropsType) => {
-  const { isProfileModify, setProfileModify } = useStore();
-  const [isModify, setModify] = useState(false);
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    if (pathname === '/profile') {
-      setModify(true);
-    }
-  }, [pathname]);
-
-  const onClick = () => {
-    setProfileModify(!isProfileModify);
-    setModify(!isModify);
-  };
-
+const Navigation = ({ title, color, left, right }: UiType.NavigationOptions) => {
   return (
-    <div className={cx(styles.container, { onboarding: onboarding })}>
-      <div className={styles.icon}>{icon && icon}</div>
-      <div className={styles.title}>{title}</div>
-      {isModify && <button onClick={onClick}>편집</button>}
-    </div>
+    <header className={cx(styles.container, { [styles[`${color}`]]: color })}>
+      <div className={styles.wrap}>
+        {left && (
+          <div className={cx('left', styles.icon)} onClick={left.onClick}>
+            {left.element}
+          </div>
+        )}
+        {title && <div className={'bold-20 ' + styles.title}>{title}</div>}
+        {right && (
+          <div className={cx('right', styles.icon)} onClick={right.onClick}>
+            {right.element}
+          </div>
+        )}
+      </div>
+      <SideMenu />
+    </header>
   );
 };
 

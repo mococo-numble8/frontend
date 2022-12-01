@@ -1,21 +1,32 @@
-import React, { PropsWithChildren } from 'react';
+import classNames from 'classnames';
+import React, { PropsWithChildren, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { useStore } from 'store/store';
 import styles from './Overlay.module.scss';
 
-const portalElement = document.getElementById('overlays');
+type PropsType = PropsWithChildren<{
+  duration?: boolean;
+}>;
 
-const Overlay: React.FC<PropsWithChildren> = ({ children }) => {
-  const { isModal, setModal } = useStore();
+const portalElement = document.getElementById('overlays');
+const cx = classNames.bind(styles);
+
+const Overlay: React.FC<PropsType> = ({ duration, children }) => {
+  const { isOverlay, setOverlay } = useStore();
+
+  useEffect(() => {
+    return () => setOverlay(false);
+  }, [setOverlay]);
 
   return (
     <>
       {portalElement &&
-        isModal &&
+        isOverlay &&
         createPortal(
-          <div className={styles.overlay} onClick={() => setModal(false)}>
+          <>
+            <div className={cx(styles.overlay, duration && styles.off)} onClick={() => setOverlay(false)} />
             {children}
-          </div>,
+          </>,
           portalElement,
         )}
     </>

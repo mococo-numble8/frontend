@@ -1,8 +1,13 @@
-.layout {
-  height: 100%;
+@import 'src/variables.scss';
 
-  &.default {
-    padding: 1rem;
+.layout {
+  position: relative;
+  max-width: $mobile-width;
+  height: 100%;
+  margin: auto;
+
+  &.padding {
+    padding: 1.5rem;
   }
 
   &.fit {
@@ -22,12 +27,8 @@
       width: 100%;
     }
   }
-}
 
-.use-navigation {
-  padding-top: 4rem;
-}
-
-.onboarding {
-  background-color: #F9F7F7;
+  &.use-navigation {
+    padding-top: calc($nav-height - 1px);
+  }
 }

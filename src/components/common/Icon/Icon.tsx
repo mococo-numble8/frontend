@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import styles from './Icon.module.scss';
 
 interface PropsType {
@@ -7,16 +6,8 @@ interface PropsType {
   className?: string; // size
 }
 
-const cx = classNames.bind(styles);
-
-const Icon = ({ name, alt, className }: PropsType) => {
-  return (
-    <img
-      alt={alt}
-      src={`/vectors/${name}.svg`}
-      className={cx({ [styles[`${className}`]]: className })}
-    />
-  );
+const Icon = ({ name, alt, className = 'default' }: PropsType) => {
+  return <img alt={alt} src={`/vectors/${name}.svg`} className={styles[`${className}`]} />;
 };
 
 export default Icon;

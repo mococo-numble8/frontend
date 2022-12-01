@@ -6,7 +6,7 @@ interface PropsType {
 }
 
 const KakaoAddress = ({ coords }: PropsType) => {
-  const [address, setAddress] = useState<string>();
+  const [address, setAddress] = useState<string>('');
 
   useEffect(() => {
     const geocoder = new kakao.maps.services.Geocoder(); // 주소-좌표 변환 객체
@@ -22,7 +22,7 @@ const KakaoAddress = ({ coords }: PropsType) => {
     geocoder.coord2Address(coord.getLng(), coord.getLat(), callback);
   }, [coords]);
 
-  return <div>{address}</div>;
+  return <>{address}</>;
 };
 
 export default KakaoAddress;
